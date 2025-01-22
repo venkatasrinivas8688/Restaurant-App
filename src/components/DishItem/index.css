@@ -1,69 +1,38 @@
 .dish-item-container {
   border: 1px solid gray;
   border-radius: 12px;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  width: 100%;
-  margin-left: 5px;
-  margin-right: 5px;
-  box-shadow: 0px 0px 5px 0px;
-  margin-bottom: 14px;
-  height: 255px;
 }
 
 .veg-border {
-  border: 2px solid #00923f;
-  margin-left: 14px;
-  margin-top: 15px;
-  width: 40px;
-  height: 40px;
+  border: 1px solid #00923f;
+  align-self: flex-start;
 }
 
 .non-veg-border {
-  border: 2px solid #92282a;
-  margin-left: 14px;
-  margin-top: 15px;
-  width: 40px;
-  height: 40px;
+  border: 1px solid #92282a;
 }
 
 .veg-round {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   background-color: #00923f;
-  align-self: center;
-  margin-top: 3px;
-  padding-left: 3px;
-  margin-left: 2px;
-  margin-right:3px;
+  margin: 5px;
 }
 
 .non-veg-round {
   background-color: #92282a;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  align-self: center;
-  margin-top: 3px;
-  padding-left: 3px;
-  margin-left: 2px;
-  margin-right:3px;
 }
 
 .dish-details-container {
-  width: 340px;
-  display: flex;
-  padding-top: 12px;
-  flex-direction: column;
-  margin-left: 10px;
+  flex-grow: 1;
 }
 
 .dish-name {
   font-weight: 600;
   font-family: 'Roboto';
-  font-size: 16px;
+  font-size: 25px;
   margin-top: 0;
 }
 
@@ -88,12 +57,9 @@
 .controller-container {
   width: fit-content;
   min-width: 150px;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   padding: 10px;
   border-radius: 50px;
-  background-color: #00923f;
 }
 
 .button {
@@ -116,18 +82,14 @@
 .not-availability-text {
   font-weight: 500;
   font-size: 18px;
-  margin: 5px;
-  color: red;
+  margin: 5px 0;
 }
 
 .addon-availability-text {
   font-weight: 500;
   font-size: 18px;
   margin: 5px 0;
-  padding-top: 8px;
   color: #734ff4;
-  padding-bottom: 30px;
-  margin-bottom: 20px;
 }
 
 .dish-calories {
@@ -137,30 +99,11 @@
   font-family: 'Roboto';
   font-size: 18px;
   align-self: center;
-  color: #f25622;
 }
 
 .dish-image {
-  width: 210px;
-  height: 240px;
+  width: 150px;
+  height: 150px;
   border-radius: 12px;
-  margin-top:8px;
   align-self: flex-start;
-}
-.increase-decrease-btn {
-  background-color: #00923f;
-  display: flex;
-  width: 80px;
-  padding-top: 9px;
-  padding-bottom: 9px;
-  flex-direction: row;
-  justify-content: space-between;
-  border-radius: 6px;
-}
-.btn {
-  outline: none;
-  border: none;
-  background-color: transparent;
-  font-size: 20px;
-  color: #ffffff;
 }

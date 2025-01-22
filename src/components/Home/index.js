@@ -68,7 +68,6 @@ const Home = () => {
     const apiResponse = await fetch(api)
     const data = await apiResponse.json()
     const updatedData = getUpdatedData(data[0].table_menu_list)
-    console.log(updatedData)
     setResponse(updatedData)
     setActiveCategoryId(updatedData[0].menuCategoryId)
     setIsLoading(false)
@@ -76,7 +75,6 @@ const Home = () => {
 
   useEffect(() => {
     fetchRestaurantApi()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const onUpdateActiveCategoryIdx = menuCategoryId =>
@@ -97,7 +95,10 @@ const Home = () => {
           key={eachCategory.menuCategoryId}
           onClick={onClickHandler}
         >
-          <button type="button" className="mt-0 mb-0 tab-category-button">
+          <button
+            type="button"
+            className="mt-0 mb-0 ms-2 me-2 tab-category-button"
+          >
             {eachCategory.menuCategory}
           </button>
         </li>
@@ -110,7 +111,7 @@ const Home = () => {
     )
 
     return (
-      <ul className="m-0 dishes-list-container">
+      <ul className="m-0 d-flex flex-column dishes-list-container">
         {categoryDishes.map(eachDish => (
           <DishItem
             key={eachDish.dishId}
@@ -135,7 +136,7 @@ const Home = () => {
   ) : (
     <div className="home-background">
       <Header cartItems={cartItems} />
-      <ul className="m-0 ps-0 tab-container">{renderTabMenuList()}</ul>
+      <ul className="m-0 ps-0 d-flex tab-container">{renderTabMenuList()}</ul>
       {renderDishes()}
     </div>
   )
